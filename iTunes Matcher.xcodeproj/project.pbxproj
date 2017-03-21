@@ -11,7 +11,35 @@
 		FB2C39E31E7618D800A1D5AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C39E21E7618D800A1D5AD /* ViewController.swift */; };
 		FB2C39E51E7618D800A1D5AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2C39E41E7618D800A1D5AD /* Assets.xcassets */; };
 		FB2C39E81E7618D800A1D5AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2C39E61E7618D800A1D5AD /* Main.storyboard */; };
+		FB4004D61E762A610040D091 /* iTunesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4004D51E762A610040D091 /* iTunesApi.swift */; };
+		FB4004D71E762DB60040D091 /* ID3Edit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4004D11E7624CE0040D091 /* ID3Edit.framework */; };
+		FB4004D81E762DB60040D091 /* ID3Edit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB4004D11E7624CE0040D091 /* ID3Edit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FBB973051E80BB6800FBCC18 /* DraggingDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB973021E80B75000FBCC18 /* DraggingDestinationView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FBB973001E76333F00FBCC18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBB972FB1E76333F00FBCC18 /* ID3Edit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4A1804001C3DED53000E1FF2;
+			remoteInfo = ID3Edit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FB9ED9981E76226A006AE05F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FB4004D81E762DB60040D091 /* ID3Edit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FB2C39DD1E7618D800A1D5AD /* iTunes Matcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunes Matcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +48,10 @@
 		FB2C39E41E7618D800A1D5AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB2C39E71E7618D800A1D5AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB2C39E91E7618D800A1D5AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB4004D11E7624CE0040D091 /* ID3Edit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ID3Edit.framework; path = ID3Edit/ID3Edit.framework; sourceTree = "<group>"; };
+		FB4004D51E762A610040D091 /* iTunesApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesApi.swift; sourceTree = "<group>"; };
+		FBB972FB1E76333F00FBCC18 /* ID3Edit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ID3Edit.xcodeproj; path = ID3Edit/ID3Edit.xcodeproj; sourceTree = "<group>"; };
+		FBB973021E80B75000FBCC18 /* DraggingDestinationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggingDestinationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB4004D71E762DB60040D091 /* ID3Edit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +71,8 @@
 			children = (
 				FB2C39DF1E7618D800A1D5AD /* iTunes Matcher */,
 				FB2C39DE1E7618D800A1D5AD /* Products */,
+				FBB972FB1E76333F00FBCC18 /* ID3Edit.xcodeproj */,
+				FB4004D11E7624CE0040D091 /* ID3Edit.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,13 +87,31 @@
 		FB2C39DF1E7618D800A1D5AD /* iTunes Matcher */ = {
 			isa = PBXGroup;
 			children = (
+				FBB973041E80B78400FBCC18 /* Views */,
 				FB2C39E01E7618D800A1D5AD /* AppDelegate.swift */,
+				FB4004D51E762A610040D091 /* iTunesApi.swift */,
 				FB2C39E21E7618D800A1D5AD /* ViewController.swift */,
 				FB2C39E41E7618D800A1D5AD /* Assets.xcassets */,
 				FB2C39E61E7618D800A1D5AD /* Main.storyboard */,
 				FB2C39E91E7618D800A1D5AD /* Info.plist */,
 			);
 			path = "iTunes Matcher";
+			sourceTree = "<group>";
+		};
+		FBB972FC1E76333F00FBCC18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBB973011E76333F00FBCC18 /* ID3Edit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FBB973041E80B78400FBCC18 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FBB973021E80B75000FBCC18 /* DraggingDestinationView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,6 +124,7 @@
 				FB2C39D91E7618D700A1D5AD /* Sources */,
 				FB2C39DA1E7618D700A1D5AD /* Frameworks */,
 				FB2C39DB1E7618D700A1D5AD /* Resources */,
+				FB9ED9981E76226A006AE05F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -109,12 +163,28 @@
 			mainGroup = FB2C39D41E7618D700A1D5AD;
 			productRefGroup = FB2C39DE1E7618D800A1D5AD /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FBB972FC1E76333F00FBCC18 /* Products */;
+					ProjectRef = FBB972FB1E76333F00FBCC18 /* ID3Edit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FB2C39DC1E7618D700A1D5AD /* iTunes Matcher */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FBB973011E76333F00FBCC18 /* ID3Edit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ID3Edit.framework;
+			remoteRef = FBB973001E76333F00FBCC18 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FB2C39DB1E7618D700A1D5AD /* Resources */ = {
@@ -133,6 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBB973051E80BB6800FBCC18 /* DraggingDestinationView.swift in Sources */,
+				FB4004D61E762A610040D091 /* iTunesApi.swift in Sources */,
 				FB2C39E31E7618D800A1D5AD /* ViewController.swift in Sources */,
 				FB2C39E11E7618D800A1D5AD /* AppDelegate.swift in Sources */,
 			);
@@ -248,6 +320,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = C83BNSBYZV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ID3Edit",
+				);
 				INFOPLIST_FILE = "iTunes Matcher/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ianjtaylor.iTunes-Matcher";
@@ -262,6 +338,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = C83BNSBYZV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ID3Edit",
+				);
 				INFOPLIST_FILE = "iTunes Matcher/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ianjtaylor.iTunes-Matcher";
@@ -289,6 +369,7 @@
 				FB2C39EE1E7618D800A1D5AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
