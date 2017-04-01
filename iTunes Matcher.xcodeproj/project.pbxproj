@@ -11,6 +11,7 @@
 		FB2C39E31E7618D800A1D5AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2C39E21E7618D800A1D5AD /* ViewController.swift */; };
 		FB2C39E51E7618D800A1D5AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2C39E41E7618D800A1D5AD /* Assets.xcassets */; };
 		FB2C39E81E7618D800A1D5AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2C39E61E7618D800A1D5AD /* Main.storyboard */; };
+		FB37751A1E8B388C00E4FE71 /* AudioFileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3775191E8B388C00E4FE71 /* AudioFileData.swift */; };
 		FB4004D61E762A610040D091 /* iTunesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4004D51E762A610040D091 /* iTunesApi.swift */; };
 		FB4004D71E762DB60040D091 /* ID3Edit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4004D11E7624CE0040D091 /* ID3Edit.framework */; };
 		FB4004D81E762DB60040D091 /* ID3Edit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB4004D11E7624CE0040D091 /* ID3Edit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -48,6 +49,7 @@
 		FB2C39E41E7618D800A1D5AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB2C39E71E7618D800A1D5AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB2C39E91E7618D800A1D5AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB3775191E8B388C00E4FE71 /* AudioFileData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioFileData.swift; path = Classes/AudioFileData.swift; sourceTree = "<group>"; };
 		FB4004D11E7624CE0040D091 /* ID3Edit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ID3Edit.framework; path = ID3Edit/ID3Edit.framework; sourceTree = "<group>"; };
 		FB4004D51E762A610040D091 /* iTunesApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesApi.swift; sourceTree = "<group>"; };
 		FBB972FB1E76333F00FBCC18 /* ID3Edit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ID3Edit.xcodeproj; path = ID3Edit/ID3Edit.xcodeproj; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				FBB973041E80B78400FBCC18 /* Views */,
 				FB2C39E01E7618D800A1D5AD /* AppDelegate.swift */,
 				FB4004D51E762A610040D091 /* iTunesApi.swift */,
+				FB3775191E8B388C00E4FE71 /* AudioFileData.swift */,
 				FB2C39E21E7618D800A1D5AD /* ViewController.swift */,
 				FB2C39E41E7618D800A1D5AD /* Assets.xcassets */,
 				FB2C39E61E7618D800A1D5AD /* Main.storyboard */,
@@ -206,6 +209,7 @@
 				FBB973051E80BB6800FBCC18 /* DraggingDestinationView.swift in Sources */,
 				FB4004D61E762A610040D091 /* iTunesApi.swift in Sources */,
 				FB2C39E31E7618D800A1D5AD /* ViewController.swift in Sources */,
+				FB37751A1E8B388C00E4FE71 /* AudioFileData.swift in Sources */,
 				FB2C39E11E7618D800A1D5AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,9 +1,10 @@
 import Cocoa
+import AVFoundation
 
 
 protocol DraggingDestinationViewDelegate {
-    func processImageURLs(_ urls: [URL], center: NSPoint)
-    func processImage(_ image: NSImage, center: NSPoint)
+    func processFileURLs(_ urls: [URL], center: NSPoint)
+    func processArtwork(_ image: NSImage, center: NSPoint)
 }
 
 class DraggingDestinationView: NSView {
@@ -34,20 +35,15 @@ class DraggingDestinationView: NSView {
         }
     }
     
-    //we override hitTest so that this view which sits at the top of the view hierachy
-    //appears transparent to mouse clicks
-    override func hitTest(_ aPoint: NSPoint) -> NSView? {
-        return nil
-    }
     
-    let filteringOptions = [NSPasteboardURLReadingContentsConformToTypesKey: NSImage.imageTypes()]
+    let musicFilteringOptions = [NSPasteboardURLReadingContentsConformToTypesKey: [AVFoundation.AVFileTypeMPEGLayer3]]
     
     func shouldAllowDrag(_ draggingInfo: NSDraggingInfo) -> Bool {
         var canAccept = false
         
         let pasteBoard = draggingInfo.draggingPasteboard()
         
-        if pasteBoard.canReadObject(forClasses: [NSURL.self], options: filteringOptions) {
+        if pasteBoard.canReadObject(forClasses: [NSURL.self], options: musicFilteringOptions) {
             canAccept = true
         }
         
@@ -84,11 +80,13 @@ class DraggingDestinationView: NSView {
         
         let point = convert(sender.draggingLocation(), from: nil)
         
-        if let urls = pasteBoard.readObjects(forClasses: [NSURL.self], options: filteringOptions) as? [URL], urls.count > 0 {
-            delegate?.processImageURLs(urls, center: point)
+        if let urls = pasteBoard.readObjects(forClasses: [NSURL.self], options: musicFilteringOptions) as? [URL], urls.count > 0 {
+            delegate?.processFileURLs(urls, center: point)
             return true
         }
         
         return false
     }
+    
+    
 }

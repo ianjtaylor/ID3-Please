@@ -15,6 +15,12 @@ func getArtistFromMp3(file: MP3File) -> String {
         return artist
 }
 
-func getSearchFromFilename(filename: String) -> String {
-    return ""
+func removeFilePrefix(filename: String) -> String {
+
+    let regexString = try! NSRegularExpression(pattern: "^\\d+\\W+")
+    let range = NSMakeRange(0, filename.characters.count)
+    let newFilename = regexString.stringByReplacingMatches(in: filename, options: [], range: range, withTemplate: "")
+    
+    return newFilename
 }
+
